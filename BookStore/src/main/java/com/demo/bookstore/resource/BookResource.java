@@ -1,7 +1,9 @@
 package com.demo.bookstore.resource;
 
+import com.demo.bookstore.exception.AuthorNotFoundException;
 import com.demo.bookstore.exception.BookNotFoundException;
 import com.demo.bookstore.exception.InvalidInputException;
+import com.demo.bookstore.model.Author;
 import com.demo.bookstore.model.Book;
 import com.demo.bookstore.util.DataStore;
 
@@ -40,6 +42,12 @@ public class BookResource {
         
         if (book.getAuthorId() <= 0) {
             throw new InvalidInputException("Valid author ID is required");
+        }
+        
+        // Check if author exists before adding the book
+        Author author = DataStore.getAuthorById(book.getAuthorId());
+        if (author == null) {
+            throw new AuthorNotFoundException("Cannot add book. Author with ID " + book.getAuthorId() + " does not exist");
         }
         
         if (book.getPrice() < 0) {
