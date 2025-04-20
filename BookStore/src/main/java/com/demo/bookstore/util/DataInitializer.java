@@ -20,9 +20,9 @@ public class DataInitializer {
         }
         
         // Create sample authors
-        Author author1 = new Author(0, "J.K. Rowling", "British author best known for the Harry Potter series");
-        Author author2 = new Author(0, "George Orwell", "English novelist and essayist, journalist and critic");
-        Author author3 = new Author(0, "Harper Lee", "American novelist widely known for her novel To Kill a Mockingbird");
+        Author author1 = new Author(0, "J.K.", "Rowling", "British author best known for the Harry Potter series");
+        Author author2 = new Author(0, "George", "Orwell", "English novelist and essayist, journalist and critic");
+        Author author3 = new Author(0, "Harper", "Lee", "American novelist widely known for her novel To Kill a Mockingbird");
         
         author1 = DataStore.addAuthor(author1);
         author2 = DataStore.addAuthor(author2);
@@ -42,8 +42,8 @@ public class DataInitializer {
         DataStore.addBook(book5);
         
         // Create sample customers
-        Customer customer1 = new Customer(0, "John Doe", "john.doe@example.com", "password123");
-        Customer customer2 = new Customer(0, "Jane Smith", "jane.smith@example.com", "password456");
+        Customer customer1 = new Customer(0, "John", "Doe", "john.doe@example.com", "password123");
+        Customer customer2 = new Customer(0, "Jane", "Smith", "jane.smith@example.com", "password456");
         
         DataStore.addCustomer(customer1);
         DataStore.addCustomer(customer2);
