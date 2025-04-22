@@ -42,8 +42,8 @@ public class DataInitializer {
         DataStore.addBook(book5);
         
         // Create sample customers
-        Customer customer1 = new Customer(0, "John", "Doe", "john.doe@example.com", "password123");
-        Customer customer2 = new Customer(0, "Jane", "Smith", "jane.smith@example.com", "password456");
+        Customer customer1 = new Customer(0, "Lakindu", "Perera", "lakinduperera123@gmail.com", "laki123");
+        Customer customer2 = new Customer(0, "Janidu", "Costa", "janiducosta321@gmail.com", "jani123");
         
         DataStore.addCustomer(customer1);
         DataStore.addCustomer(customer2);
